@@ -142,9 +142,8 @@ export const Table = () => {
           </thead>
           <tbody className="divide-gray-200 rounded-lg bg-gray-400 bg-opacity-10 shadow-xl  flex-col  justify-between items-center ml-3 align-middle pt-3 pb-3">
             {user.list
-              .slice() // Create a shallow copy to avoid mutating the original array
+              .slice()
               .sort((a, b) => {
-                // Customize the sorting logic based on status
                 const statusOrder: { [key: string]: number } = {
                     Low: 1,
                     Medium: 2,
